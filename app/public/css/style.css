@@ -1,5 +1,5 @@
 /* Desenvolvido por Amanda Souza */
-body {
+*body {
     font-family: 'Noto Serif', serif;
 }
 
@@ -31,6 +31,24 @@ header{
     text-shadow: 4px 4px 8px black;
     font-size: 3vw;
     font-weight: bold;
+}
+
+.principal {
+    background-color: #FAF8D4;
+    color: #1B1B3A;
+}
+
+.lead{
+    font-style: italic;
+}
+
+.botao {
+    background-color: #1B1B3A;
+    color: #FAF8D4;
+}
+
+#bio {
+    resize: none;
 }
 
 footer {

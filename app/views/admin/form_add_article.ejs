@@ -1,9 +1,40 @@
 <%- include('../common/header')  %>
 <%- include('../common/menu')  %>
 
-    <main>
+    <main class="principal pb-5">
       
-      <h1>area para adicionar novo artigo</h1>
+      <div class="p-5 mb-4">
+        <div class="container text-center">
+          <h1>Adicione histórias inspiradoras de mulheres na tecnologia</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <form action="">
+          <div class="mb-3">
+            <label for="name" class="form-label">
+              Nome da Diva
+            </label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Nome" autocomplete="off" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="photo" class="form-label">Adicione a URL da foto de capa</label>
+            <input class="form-control" type="text" id="photo" placeholder="http://" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="bio" class="form-label">
+              Biografia
+            </label>
+            <textarea class="form-control" name="bio" id="bio" cols="30" rows="10" required></textarea>
+          </div>
+
+
+          <button type="submit" class="btn btn-lg w-100 botao">Enviar</button>
+
+        </form>
+      </div>
 
     </main>
 
