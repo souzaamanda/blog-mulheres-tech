@@ -1,0 +1,29 @@
+/* Desenvolvido por Amanda Souza */
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+header {
+    background-color: #995C88;
+}
+
+.menu{
+    font-size: 20px;
+    font-weight: 400;
+    color: #FAF8D4;
+    font-style: italic;
+}
+
+.bg-imagem{
+    height: 48vw;
+    background-image:linear-gradient(rgba(153, 113, 181, 0.5),rgba(60, 49, 75, 0.458)100%), url(/img/cover.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+
+.bg-imagem p{
+    color: #FAF8D4;
+    text-shadow: 4px 4px 8px black;
+    font-size: 3vw;
+    font-weight: bold;
+}

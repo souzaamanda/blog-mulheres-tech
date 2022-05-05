@@ -1,7 +1,7 @@
 {
   "name": "Projeto Base",
   "version": "1.0.0",
-  "description": "Projeto didático",
+  "description": "Site de mulheres da tecnologia",
   "engines": {
     "node": "14.x"
   },
@@ -10,11 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "Cel.Lep Tech Coding",
+  "author": "Amanda de Souza",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
     "express-session": "^1.17.2",
     "pg": "^8.7.1"
   }
