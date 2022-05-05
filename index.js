@@ -27,11 +27,10 @@ app.get('/articles', (req, res) =>{
 })
 //rota admin
 app.get('/admin', (req, res) =>{
-  res.render('admin/admin')
+  res.render('admin/form_add_article')
 })
 
 // Start Server
 app.listen(process.env.PORT || 3000, () => {
   console.log('Servidor rodando com express')
-  console.log('Pressione CTRL+C para encerrar')
 });

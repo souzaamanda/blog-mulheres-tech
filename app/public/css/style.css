@@ -3,7 +3,7 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
-header {
+header{
     background-color: #995C88;
 }
 
@@ -14,11 +14,16 @@ header {
     font-style: italic;
 }
 
-.bg-imagem{
-    height: 48vw;
-    background-image:linear-gradient(rgba(153, 113, 181, 0.5),rgba(60, 49, 75, 0.458)100%), url(/img/cover.jpg);
+.activ{
+    color:#1B1B3A ;
+}
+
+.bg-imagem {
+    height: 46vw;
+    background-image:linear-gradient(rgba(153, 113, 181, 0.5),rgba(60, 49, 75, 0.458)100%), url(https://ctrlplay.com.br/wp-content/uploads/2019/08/Ada-WomenThatDid.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+    background-position: center;
   }
 
 .bg-imagem p{
@@ -26,4 +31,11 @@ header {
     text-shadow: 4px 4px 8px black;
     font-size: 3vw;
     font-weight: bold;
+}
+
+footer {
+    background-color: #995C88;
+    color: #FAF8D4;
+    font-style: italic;
+    font-size: 14px;
 }
