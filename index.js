@@ -14,16 +14,26 @@ app.use(expressSession({
 //recuperando modulo configuração do server
 const app = require('./config/server')
 
+//recuperando o modulo de base de dados
+const articles = require('./mockup')
+
 
 // Rotas
 // ---------------------------------------------
 //rota home
 app.get('/', (req, res) => {
-  res.render('home/index')
+  res.render('home/index', {articles: articles.slice(0,3)})
 });
 //rota articles
 app.get('/articles', (req, res) =>{
-  res.render('articles/articles')
+  // passamos atraves de um JSON todos os artigos
+  res.render('articles/articles', {articles: articles})
+})
+//rota article
+app.get('/article', (req, res) =>{
+  //recuperar atraves do metodo GET o ID
+  const id = req.query.id
+  res.render('articles/article', {article: articles[id]})
 })
 //rota admin
 app.get('/admin', (req, res) =>{

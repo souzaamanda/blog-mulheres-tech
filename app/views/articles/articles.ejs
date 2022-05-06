@@ -14,24 +14,26 @@
 
   <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-          <div class="card shadow">
-              <img src="https://s2.glbimg.com/paF5KTEVGzMU-ZcZa2mjYicNDjM=/e.glbimg.com/og/ed/f/original/2015/03/09/ada.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <h5 class="card-title">Nome da Diva</h5>
-                  <p class="card-text">
-                      Biografia
-                  </p>
-                  <p class="card-text">
-                      <small class="text-muted">
-                          data 
-                      </small>
-                  </p>
 
-                  <a href="#" class="btn botao">saiba mais</a>
-              </div>
+        <% articles.forEach(article =>{ %>
+          <div class="col">
+            <div class="card shadow">
+                <img src="<%= article.photo %>" class="card-img-top photo-card" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%= article.diva %></h5>
+                    <p class="card-text"><%= article.bio.substring(0,130) %> ...</p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                          <%= article.data_criacao.toLocaleString('pt-BR').split(' ').join(' às ') %> 
+                        </small>
+                    </p>
+
+                    <a href="/article?id=<%= article.id_article %>" class="btn botao">Continue lendo</a>
+                </div>
+            </div>
           </div>
-          </div>
+          <% })  %>
+        
       </div>
   </div>
 

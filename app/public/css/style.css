@@ -20,7 +20,7 @@ header{
 
 .bg-imagem {
     height: 46vw;
-    background-image:linear-gradient(rgba(153, 113, 181, 0.5),rgba(60, 49, 75, 0.458)100%), url(https://ctrlplay.com.br/wp-content/uploads/2019/08/Ada-WomenThatDid.jpg);
+    background-image:linear-gradient(rgba(153, 113, 181, 0.5),rgba(60, 49, 75, 0.458)100%), url('https://ctrlplay.com.br/wp-content/uploads/2019/08/Ada-WomenThatDid.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -49,6 +49,18 @@ header{
 
 #bio {
     resize: none;
+}
+
+.photo-bio{
+    border-radius: 8px;
+}
+
+.card {
+    width: 22rem;
+}
+
+.photo-card {
+   height: 14rem;   
 }
 
 footer {

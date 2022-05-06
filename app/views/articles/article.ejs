@@ -1,0 +1,29 @@
+<%- include('../common/header')  %>
+<%- include('../common/menu')  %>
+
+<main class="principal pb-5">
+
+  <div class="p-5 mb-4">
+    <div class="container text-center">
+        <img src="<%= article.photo %>" class="img-fluid photo-bio" alt="">
+        <h1 class="mt-3"><%= article.diva %></h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12">
+            <p>
+                <small>
+                    <small class="text-muted"><%= article.data_criacao.toLocaleString('pt-BR').split(' ').join(' às ') %></small>
+                </small>
+            </p>
+            <hr>
+            <p><%= article.bio %></p>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<%- include('../common/footer')  %>
