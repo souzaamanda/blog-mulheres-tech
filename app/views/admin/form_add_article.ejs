@@ -10,17 +10,17 @@
       </div>
 
       <div class="container">
-        <form action="">
+        <form action="/admin/save-article" method="POST">
           <div class="mb-3">
-            <label for="name" class="form-label">
+            <label for="diva" class="form-label">
               Nome da Diva
             </label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Nome" autocomplete="off" required>
+            <input type="text" class="form-control" name="diva" id="diva" placeholder="Nome" autocomplete="off" required>
           </div>
           
           <div class="mb-3">
             <label for="photo" class="form-label">Adicione a URL da foto de capa</label>
-            <input class="form-control" type="text" id="photo" placeholder="http://" required>
+            <input class="form-control" type="text" id="photo" name="photo" placeholder="http://" required>
           </div>
 
           <div class="mb-3">

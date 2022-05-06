@@ -13,6 +13,7 @@ app.set('views','./app/views')
 // ---------------------------------------------
 app.use(express.static('./app/public'))
 
-
+// configuraçãp do metodos post
+app.use(express.urlencoded({extended: true}))
 
 module.exports = app
