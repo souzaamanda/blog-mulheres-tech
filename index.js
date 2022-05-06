@@ -52,14 +52,41 @@ app.get('/article', (req, res) =>{
 
 //rota admin
 app.get('/admin', (req, res) =>{
-  res.render('admin/form_add_article')
+  const autorizado = req.session.autorizado
+
+  if(autorizado == true){
+    res.render('admin/form_add_article',{autorizado: autorizado})
+  }else {
+    res.render('admin/login')
+  }
 })
+
+//rota de autentificação
+app.post('/admin/authenticate', function(req, res){
+  const{email, password} = req.body
+  //console.log(email, password)
+  if(email == 'root@email.com' && password == 'amanda1234'){
+      req.session.autorizado = true
+  }
+  res.redirect('/admin')
+})
+
+//rota de sair da area autentidada 
+app.get('/admin/logout', function(req, res){
+  req.session.destroy(erro =>{/* console.log(erro) */})
+  res.redirect('/admin')
+})
+
+
 
 //rota salvar artigos
 app.post('/admin/save-article',function(req, res){
   // recuperando as informações da requisição usando o metodo de desestruturação para receber apenas as informações desejadas
-  const {diva, photo, bio} = req.body
-  db.query('INSERT INTO articles(diva, photo, bio) VALUES($1,$2)', [diva, photo, bio], function(error, result){
+  const { diva, photo, bio} = req.body
+
+  //console.log(diva, photo, bio)
+
+  db.query('INSERT INTO articles (diva, photo, bio) VALUES ($1, $2, $3)', [diva, photo, bio], function(error, result){
      //redireciona para outra rota e remove as informações do corpo da requisição
       res.redirect('/articles')
   } )

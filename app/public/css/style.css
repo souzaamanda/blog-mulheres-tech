@@ -63,6 +63,18 @@ header{
    height: 14rem;   
 }
 
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+
+.login {
+    width: 72px;
+    height: 57px;
+}
+
 footer {
     background-color: #995C88;
     color: #FAF8D4;
