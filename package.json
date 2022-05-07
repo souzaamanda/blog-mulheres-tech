@@ -1,14 +1,14 @@
 {
-  "name": "Projeto Base",
+  "name": "Blog Mulheres da Tech",
   "version": "1.0.0",
   "description": "Site de mulheres da tecnologia",
   "engines": {
     "node": "14.x"
   },
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Amanda de Souza",
   "license": "ISC",
@@ -17,5 +17,8 @@
     "express": "^4.18.1",
     "express-session": "^1.17.2",
     "pg": "^8.7.3"
+  },
+  "engines":{
+    "node": "16.x"
   }
 }
